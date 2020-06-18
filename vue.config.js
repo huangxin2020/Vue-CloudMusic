@@ -8,6 +8,7 @@ module.exports = {
       }
     }
   },
+  publicPath:'./',
   productionSourceMap:false, // 隐藏打包后的源码
   outputDir: 'dist', //build输出目录
   assetsDir: 'assets', //静态资源目录（js, css, img）
