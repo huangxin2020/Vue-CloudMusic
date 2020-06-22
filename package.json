@@ -1,40 +1,88 @@
 {
-  "name": "cloudmusic",
-  "version": "0.1.0",
+  "name": "vue-netease-muisc",
+  "version": "3.4.0",
   "private": true,
   "scripts": {
+    "dev": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "publish": "npm run build && cd music && now",
+    "lint": "vue-cli-service lint",
+    "release-f": "standard-version -f",
+    "release-major": "standard-version -r major",
+    "release-minor": "standard-version -r minor",
+    "release-patch": "standard-version -r patch",
+    "release": "sh release.sh"
   },
   "dependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "axios": "^0.19.2",
-    "core-js": "^3.6.4",
-    "element-ui": "^2.13.0",
-    "install": "^0.13.0",
-    "pubsub-js": "^1.8.0",
-    "qs": "^6.9.1",
-    "vue": "^2.6.11",
-    "vue-router": "^3.1.5"
+    "@better-scroll/core": "^2.0.0-alpha.20",
+    "@better-scroll/mouse-wheel": "^2.0.0-alpha.20",
+    "@better-scroll/scroll-bar": "^2.0.0-alpha.20",
+    "axios": "^0.19.0",
+    "better-scroll": "^1.15.2",
+    "clipboard": "^2.0.4",
+    "core-js": "^2.6.5",
+    "element-ui": "^2.10.1",
+    "good-storage": "^1.1.0",
+    "lodash-es": "^4.17.15",
+    "vue": "^2.6.10",
+    "vue-lazyload": "^1.3.3",
+    "vue-meta": "^2.2.1",
+    "vue-router": "^3.0.3",
+    "vuex": "^3.0.1",
+    "xgplayer": "^2.1.9"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-eslint": "~4.2.0",
-    "@vue/cli-plugin-router": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
-    "@vue/eslint-config-standard": "^5.1.0",
-    "babel-eslint": "^10.0.3",
+    "@vue/cli-plugin-babel": "^3.9.0",
+    "@vue/cli-plugin-eslint": "^3.9.0",
+    "@vue/cli-service": "^3.9.0",
+    "babel-eslint": "^10.0.1",
     "babel-plugin-component": "^1.1.1",
-    "babel-plugin-transform-remove-console": "^6.9.4",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.1.2",
-    "less": "^3.11.1",
-    "less-loader": "^5.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "commitizen": "^4.0.3",
+    "concurrently": "^4.1.2",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "now": "^17.0.4",
+    "postcss-pxtorem": "^4.0.1",
+    "sass-loader": "^7.1.0",
+    "standard-changelog": "^2.0.13",
+    "standard-version": "^7.0.0",
+    "vue-template-compiler": "^2.6.10",
+    "workbox-webpack-plugin": "^5.1.3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-pxtorem": {
+        "rootValue": 14,
+        "propList": [
+          "*"
+        ]
+      }
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

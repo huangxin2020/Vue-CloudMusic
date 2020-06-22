@@ -1,38 +1,47 @@
-# CloudMusic
+### Vue全家桶完成的仿网易云音乐播放器(pc端)
 
-#### 介绍
-基于Vue全家桶而开发的云音乐播放器，前后端分离，前后的数据
+基于Vue全家桶而开发的云音乐播放器，前后端分离，通过axios从接口获取数据
 
-#### 软件架构
-后端数据来源于网易云音乐接口
+### 后端接口
 
-##### 使用技术
+https://binaryify.github.io/NeteaseCloudMusicApi
 
-- vue2.6.11
-- vue-router3.1.5
-- axios0.19.2
-- element-ui2.13.0
+### 技术栈
 
-#### 使用说明
+- ***Vue***  Vue-CLI3
+- ***Element-Ui*** ui组件样式。
+- ***better-scroll*** 滑动组件
+- ***CSS Variables*** 主题换肤。
+- ***ES 6 / 7*** JavaScript的新标准
+- ***Sass*** 功能强大的CSS预处理
+- ***postcss-pxtorem*** 用于自适应屏幕
+- ***workbox-webpack-plugin*** 谷歌开发的利用 Service Work 预缓存 chunks 的 webpack 插件。
 
-1.  npm install
-2.  npm run serve
+### 音乐播放器页面详情
 
-#### 演示界面
+![首页](http://imgsever.hxin2020.top/images/2020/06/21/de94a0c99d3525d96185bb57465ccdef.md.png)
 
-![发现音乐](https://images.gitee.com/uploads/images/2020/0317/203613_47ab5847_5551811.png "屏幕截图.png")
+![搜索页面](http://imgsever.hxin2020.top/images/2020/06/21/179df178a58eda9cd7670c88e04d1d57.md.png)
 
-![推荐歌单](https://images.gitee.com/uploads/images/2020/0317/203741_60001c1b_5551811.png "屏幕截图.png")
+![播放界面](http://imgsever.hxin2020.top/images/2020/06/21/b8a7a89dc4a8cc0b6e585e4a3f5b2a59.md.png)
 
-![最新音乐](https://images.gitee.com/uploads/images/2020/0317/203823_4651e18b_5551811.png "屏幕截图.png")
+![推荐歌曲](http://imgsever.hxin2020.top/images/2020/06/21/95166601ee75c133727ac53114cabf71.md.png)
 
-![最新MV](https://images.gitee.com/uploads/images/2020/0317/203923_69f7e2ac_5551811.png "屏幕截图.png")
+![最新歌曲](http://imgsever.hxin2020.top/images/2020/06/21/41ea742639a0e4d828a4a0de773548ef.md.png)
 
-![搜索页面](https://images.gitee.com/uploads/images/2020/0317/203957_169532f1_5551811.png "屏幕截图.png")
-![输入图片说明](https://images.gitee.com/uploads/images/2020/0317/204026_e0b7b061_5551811.png "屏幕截图.png")
+![最热MV](http://imgsever.hxin2020.top/images/2020/06/21/MV6e312e4ba8b99a7d.md.png)
 
-![歌单详情](https://images.gitee.com/uploads/images/2020/0317/204132_282ae6c6_5551811.png "屏幕截图.png")
+![播放器换肤](http://imgsever.hxin2020.top/images/2020/06/21/75e3edacb52f979b38888947839dadb7.md.png)
 
-![MV播放](https://images.gitee.com/uploads/images/2020/0317/204249_b95db264_5551811.png "屏幕截图.png")
 
-![评论](https://images.gitee.com/uploads/images/2020/0317/204323_5f3a1e9e_5551811.png "屏幕截图.png")
+
+### 安装与使用
+
+```
+npm i
+npm run dev
+```
+
+### 感谢名单
+
+看到sl1673495大佬的仿网易云音乐开源项目之后，根据大佬的开源代码自己重新完成一遍，练习自己的Vue全家桶开发能力

@@ -1,22 +1,34 @@
 <template>
   <div id="app">
-    <top />
-    <index />
+    <Layout />
+    <Player />
+    <MiniPlayer />
+    <Playlist />
+    <ShareReader />
   </div>
 </template>
 
 <script>
-import top from './components/01.top.vue';
-import index from './components/02.index.vue';
+import Layout from "@/layout"
+import MiniPlayer from "@/components/mini-player"
+import Playlist from "@/components/playlist"
+import Player from "@/components/player"
+import ShareReader from "@/components/share-reader"
+
 export default {
-  name: 'app',
-  components: {
-    top,
-    index
-  }
-};
+  metaInfo() {
+    return {
+      title: "Vue云音乐播放器"
+    }
+  },
+  components: { Layout, MiniPlayer, Playlist, Player, ShareReader }
+}
 </script>
 
-<style >
-
+<style lang="scss">
+#app {
+  height: 100%;
+  background-color: var(--body-bgcolor);
+  font-size: $font-size;
+}
 </style>
